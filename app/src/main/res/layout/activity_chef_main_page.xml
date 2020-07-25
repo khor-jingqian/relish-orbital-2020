@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChefMainPage"
+    android:background="@color/mainTheme">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="26dp"
+        android:background="@drawable/rounded_shape">
+
+        <ImageView
+            android:id="@+id/chefmainpage_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/relish_launcher_round"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingTop="50dp"/>
+        <TextView
+            android:id="@+id/chefmainpage_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/chefmainpage_logo"
+            app:layout_constraintStart_toStartOf="@id/chefmainpage_logo"
+            app:layout_constraintEnd_toEndOf="@id/chefmainpage_logo"
+            android:text="Welcome, "
+
+            android:textSize="20sp"
+            app:layout_constraintHorizontal_bias="0.6"
+            android:layout_marginTop="35dp"/>
+
+        <TextView
+            android:id="@+id/chefmainpage_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here are some of your details: "
+            app:layout_constraintEnd_toEndOf="@+id/chefmainpage_greeting"
+            app:layout_constraintStart_toStartOf="@+id/chefmainpage_greeting"
+            app:layout_constraintTop_toBottomOf="@id/chefmainpage_greeting"
+            app:layout_constraintHorizontal_bias="0.9"
+            android:textSize="15sp"
+            android:layout_marginTop="25dp"/>
+
+        <TextView
+            android:id="@+id/chefmainpage_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop name: "
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/chefmainpage_details"
+            app:layout_constraintTop_toBottomOf="@id/chefmainpage_details"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/chefmainpage_cuisine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuisine: "
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/chefmainpage_username"
+            app:layout_constraintTop_toBottomOf="@id/chefmainpage_username" />
+
+        <TextView
+            android:layout_marginTop="14dp"
+            android:id="@+id/chefmainpage_greet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Here are your dishes, \nclick on any dish to delete it from your menu!"
+            app:layout_constraintStart_toStartOf="@+id/chefmainpage_cuisine"
+            app:layout_constraintTop_toBottomOf="@+id/chefmainpage_cuisine" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:layout_constraintStart_toStartOf="@id/chefmainpage_greet"
+            app:layout_constraintTop_toBottomOf="@id/chefmainpage_greet">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chefmainpage_recyclerview"
+                android:layout_width="275dp"
+                android:layout_height="wrap_content" />
+
+
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/chefmainpage_emptymenumsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Currently no item in the menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+            app:layout_constraintStart_toStartOf="@+id/scrollView2"
+            app:layout_constraintTop_toTopOf="@+id/scrollView2" />
+
+        <ProgressBar
+            android:id="@+id/chefmainpage_pb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/scrollView2"
+            app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+            app:layout_constraintStart_toStartOf="@+id/scrollView2"
+            app:layout_constraintTop_toTopOf="@+id/scrollView2" />
+
+        <TextView
+            android:id="@+id/chefmainpage_ordersgreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current orders: \n"
+            app:layout_constraintStart_toStartOf="@+id/scrollView2"
+            app:layout_constraintTop_toBottomOf="@id/scrollView2"
+            android:layout_marginTop="30dp"
+            android:paddingBottom="10dp"/>
+
+        <TableLayout
+            android:id="@+id/chefmainpage_tablelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/image_borders"
+            android:paddingBottom="40dp"
+            android:stretchColumns="*"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintTop_toBottomOf="@id/chefmainpage_ordersgreeting" />
+
+
+        <ImageButton
+            android:id="@+id/chefmainpage_logout"
+            app:layout_constraintHorizontal_bias="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:src="@drawable/ic_exit_to_app_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/chefmainpage_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/chefmainpage_picturegreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/chefmainpage_tablelayout"
+            app:layout_constraintStart_toStartOf="@id/chefmainpage_ordersgreeting"
+            android:text="Upload/Change picture: "
+            android:layout_marginTop="40dp"/>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/chefmainpage_profilepic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile Picture"
+            app:layout_constraintEnd_toStartOf="@id/chefmainpage_newdish"
+            app:layout_constraintTop_toBottomOf="@id/chefmainpage_picturegreeting" />
+
+        <Button
+            android:id="@+id/chefmainpage_newdish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Dish"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/chefmainpage_profilepic"
+            app:layout_constraintTop_toTopOf="@id/chefmainpage_profilepic" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

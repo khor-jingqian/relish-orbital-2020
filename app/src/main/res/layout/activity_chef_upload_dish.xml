@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChefUploadDish"
+    android:background="@color/mainTheme">
+
+    <ImageView
+        android:id="@+id/chefuploaddish_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="26dp"
+        android:background="@drawable/rounded_shape"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="26dp" />
+
+    <TextView
+        android:id="@+id/chefuploaddish_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="Choose your method: "
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/chefuploaddish_background"
+        app:layout_constraintStart_toStartOf="@+id/chefuploaddish_background"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/chefuploaddish_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:background="@color/button"
+        android:text="Upload picture"
+        app:layout_constraintEnd_toEndOf="@+id/chefuploaddish_text"
+        app:layout_constraintStart_toStartOf="@+id/chefuploaddish_text"
+        app:layout_constraintTop_toBottomOf="@+id/chefuploaddish_text" />
+
+    <ImageView
+        android:id="@+id/chefuploaddish_preview"
+        android:layout_marginTop="30dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@color/button"
+        app:layout_constraintEnd_toEndOf="@+id/chefuploaddish_gallery"
+        app:layout_constraintStart_toStartOf="@+id/chefuploaddish_gallery"
+        app:layout_constraintTop_toBottomOf="@id/chefuploaddish_gallery" />
+
+    <EditText
+        android:id="@+id/chefuploaddish_name"
+        android:layout_marginTop="50dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Dish name"
+        app:layout_constraintTop_toBottomOf="@id/chefuploaddish_preview"
+        app:layout_constraintStart_toStartOf="@id/chefuploaddish_preview"/>
+
+    <EditText
+        android:id="@+id/chefuploaddish_price"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Price"
+        app:layout_constraintStart_toStartOf="@id/chefuploaddish_name"
+        app:layout_constraintTop_toBottomOf="@id/chefuploaddish_name" />
+
+    <EditText
+        android:id="@+id/chefuploaddish_desc"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:hint="Short description"
+        app:layout_constraintEnd_toEndOf="@+id/chefuploaddish_price"
+        app:layout_constraintStart_toStartOf="@+id/chefuploaddish_price"
+        app:layout_constraintTop_toBottomOf="@id/chefuploaddish_price" />
+
+    <Button
+        android:id="@+id/chefuploaddish_upload"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/button"
+        android:text="Upload!"
+        app:layout_constraintEnd_toEndOf="@+id/chefuploaddish_desc"
+        app:layout_constraintStart_toStartOf="@+id/chefuploaddish_desc"
+        app:layout_constraintTop_toBottomOf="@id/chefuploaddish_desc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

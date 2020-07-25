@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chefsignupfinal_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainTheme"
+    tools:context=".ChefSignupFinal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="26dp"
+        android:background="@android:color/white"
+        android:paddingBottom="35dp">
+
+        <ImageView
+            android:id="@+id/chefsignupcont_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_shape" />
+
+        <ImageView
+            android:id="@+id/chefsignupcont_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/relish_launcher"
+            app:layout_constraintEnd_toEndOf="@+id/chefsignupcont_background"
+            app:layout_constraintStart_toStartOf="@+id/chefsignupcont_background"
+            app:layout_constraintTop_toTopOf="@+id/chefsignupcont_background" />
+
+        <TextView
+            android:id="@+id/chefsignupfinal_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Join our community of Chefs!"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/chefsignupcont_background"
+            app:layout_constraintStart_toStartOf="@+id/chefsignupcont_background"
+            app:layout_constraintTop_toBottomOf="@+id/chefsignupcont_logo" />
+
+        <TextView
+            android:id="@+id/chefsignupfinal_greeting2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="These are the details of your store: "
+            app:layout_constraintStart_toStartOf="@id/chefsignupfinal_greeting"
+            app:layout_constraintTop_toBottomOf="@id/chefsignupfinal_greeting" />
+
+        <TextView
+            android:id="@+id/chefsignupfinal_storename"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="@+id/chefsignupfinal_greeting2"
+            app:layout_constraintTop_toBottomOf="@id/chefsignupfinal_greeting2" />
+
+        <TextView
+            android:id="@+id/chefsignupfinal_email"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/chefsignupfinal_storename"
+            app:layout_constraintTop_toBottomOf="@+id/chefsignupfinal_storename" />
+
+        <TextView
+            android:id="@+id/chefsignupfinal_postal"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/chefsignupfinal_email"
+            app:layout_constraintTop_toBottomOf="@+id/chefsignupfinal_email" />
+
+        <TextView
+            android:id="@+id/chefsignupfinal_desc"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/chefsignupfinal_postal"
+            app:layout_constraintTop_toBottomOf="@+id/chefsignupfinal_postal" />
+
+        <TextView
+            android:id="@+id/chefsignupfinal_picDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="This is the picture of your dish!"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@id/chefsignupfinal_cuisine" />
+
+        <TextView
+            android:id="@+id/chefsignupfinal_cuisine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="This is your chosen cuisine"
+            app:layout_constraintStart_toStartOf="@id/chefsignupfinal_desc"
+            app:layout_constraintTop_toBottomOf="@id/chefsignupfinal_desc" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mainTheme"
+            app:layout_constraintTop_toBottomOf="@+id/chefsignupfinal_cuisine" />
+
+        <ImageView
+            android:id="@+id/chefsignupfinal_pic"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/image_borders"
+            android:paddingBottom="26dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="@id/chefsignupfinal_picDesc"
+            app:layout_constraintStart_toStartOf="@id/chefsignupfinal_picDesc"
+            app:layout_constraintTop_toBottomOf="@id/chefsignupfinal_picDesc" />
+
+        <Button
+            android:id="@+id/chefsignupfinal_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/button"
+            android:text=" Create account! "
+            app:layout_constraintEnd_toEndOf="@id/chefsignupfinal_pic"
+            app:layout_constraintStart_toStartOf="@id/chefsignupfinal_pic"
+            app:layout_constraintTop_toBottomOf="@id/chefsignupfinal_pic" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

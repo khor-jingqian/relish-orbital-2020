@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cheflogin_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding = "26dp"
+    android:background="@color/mainTheme"
+    android:orientation="horizontal"
+    tools:context=".FilterScreen">
+
+    <ImageView
+        android:id="@+id/cheflogin_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/whiteBackground"
+        android:background="@drawable/rounded_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/filterscreen_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="55dp"
+        android:src="@mipmap/relish_launcher_round"
+        app:layout_constraintEnd_toEndOf="@+id/cheflogin_background"
+        app:layout_constraintStart_toStartOf="@+id/cheflogin_background"
+        app:layout_constraintTop_toTopOf="@+id/cheflogin_background">
+    </ImageView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintVertical_bias="0.4"
+        android:id="@+id/filterscreen_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/cheflogin_background"
+        app:layout_constraintEnd_toEndOf="@+id/cheflogin_background"
+        app:layout_constraintStart_toStartOf="@+id/cheflogin_background"
+        app:layout_constraintTop_toTopOf="@+id/cheflogin_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Welcome\nto \nRelish."
+            android:textColor="@android:color/black"
+            android:textSize="55sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filterscreen_second"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/cheflogin_background"
+        app:layout_constraintEnd_toEndOf="@+id/cheflogin_background"
+        app:layout_constraintStart_toStartOf="@+id/cheflogin_background"
+        app:layout_constraintTop_toTopOf="@+id/cheflogin_background">
+
+        <TextView
+            android:textColor="@android:color/black"
+            app:layout_constraintVertical_bias="0.33"
+            android:id="@+id/filterscreen_secondCustomer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer."
+            android:textSize="55sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/filterscreen_secondor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="or"
+            android:textSize="55sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/filterscreen_secondChef"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chef."
+            android:textColor="@android:color/black"
+            android:textSize="55sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.67"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    

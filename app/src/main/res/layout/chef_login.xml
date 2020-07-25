@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cheflogin_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding = "26dp"
+    android:background="@color/mainTheme"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/cheflogin_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_shape"
+        android:contentDescription="@string/whiteBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/cheflogin_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/relish_launcher_round"
+        app:layout_constraintBottom_toBottomOf="@+id/cheflogin_background"
+        app:layout_constraintEnd_toEndOf="@+id/cheflogin_background"
+        app:layout_constraintStart_toStartOf="@+id/cheflogin_background"
+        app:layout_constraintTop_toTopOf="@+id/cheflogin_background"
+        app:layout_constraintVertical_bias="0.2">
+
+    </ImageView>
+
+
+    <TextView
+        android:id="@+id/cheflogin_greeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_greeting"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cheflogin_background"
+        app:layout_constraintEnd_toEndOf="@id/cheflogin_logo"
+        app:layout_constraintTop_toBottomOf="@+id/cheflogin_logo"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <EditText
+        android:id="@+id/cheflogin_user_email"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:autofillHints="email"
+        android:hint="@string/emailAddress"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="@+id/cheflogin_background"
+        app:layout_constraintEnd_toEndOf="@+id/cheflogin_background"
+        app:layout_constraintStart_toStartOf="@+id/cheflogin_background"
+        app:layout_constraintTop_toBottomOf="@id/cheflogin_greeting"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <EditText
+        android:id="@+id/cheflogin_user_password"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:autofillHints="password"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/cheflogin_user_email"
+        app:layout_constraintStart_toStartOf="@+id/cheflogin_user_email"
+        app:layout_constraintTop_toBottomOf="@+id/cheflogin_user_email"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <Button
+        android:id="@+id/cheflogin_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/button"
+        android:text="@string/login_button"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintBottom_toTopOf="@id/cheflogin_register_text"
+        app:layout_constraintEnd_toEndOf="@+id/cheflogin_user_password"
+        app:layout_constraintStart_toStartOf="@+id/cheflogin_user_password"
+        app:layout_constraintTop_toBottomOf="@+id/cheflogin_user_password" />
+
+    <TextView
+        android:id="@+id/cheflogin_register_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:text="Not a member? Click me!"
+        app:layout_constraintBottom_toBottomOf="@+id/cheflogin_background"
+        app:layout_constraintEnd_toEndOf="@+id/cheflogin_button"
+        app:layout_constraintStart_toStartOf="@+id/cheflogin_button" />
+</androidx.constraintlayout.widget.ConstraintLayout>

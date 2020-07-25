@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerSignUp"
+    android:background="@color/mainTheme">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="26dp"
+        android:background="@drawable/rounded_shape"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp">
+
+        <ImageView
+            android:id="@+id/customersignup_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/relish_launcher_round"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_marginTop="25dp"
+            android:id="@+id/customersignup_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please fill in your particulars: "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customersignup_logo"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:layout_marginTop="25dp"
+            android:id="@+id/customersignup_username"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            app:layout_constraintStart_toStartOf="@+id/customersignup_greeting"
+            app:layout_constraintTop_toBottomOf="@+id/customersignup_greeting" />
+
+        <EditText
+            android:id="@+id/customersignup_password"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="Password"
+            app:layout_constraintStart_toStartOf="@+id/customersignup_username"
+            app:layout_constraintTop_toBottomOf="@+id/customersignup_username" />
+
+        <EditText
+            android:id="@+id/customersignup_email"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Email Address"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/customersignup_password"
+            app:layout_constraintTop_toBottomOf="@+id/customersignup_password" />
+
+        <EditText
+            android:id="@+id/customersignup_phone"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Phone number"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/customersignup_email"
+            app:layout_constraintTop_toBottomOf="@+id/customersignup_email" />
+
+        <TextView
+            android:id="@+id/customersignup_preferences"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Preferences: "
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/customersignup_phone"
+            app:layout_constraintTop_toBottomOf="@+id/customersignup_phone" />
+
+        <Spinner
+            android:layout_marginTop="20dp"
+            android:id="@+id/customersignup_spinner"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/CuisineChoices"
+            app:layout_constraintStart_toStartOf="@+id/customersignup_preferences"
+            app:layout_constraintTop_toBottomOf="@+id/customersignup_preferences"/>
+
+        <Button
+            android:id="@+id/customersignup_button"
+            android:text="  Create Account!  "
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_shape_maintheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customersignup_spinner"
+            android:layout_marginTop="30dp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

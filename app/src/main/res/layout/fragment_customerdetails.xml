@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerDetails"
+    android:padding="26dp"
+    android:background="@color/mainTheme">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/rounded_shape">
+
+        <ImageView
+            android:id="@+id/cust_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_shape"
+            android:contentDescription="@string/whiteBackground" />
+
+        <ImageView
+            android:id="@+id/customerdetailslogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/relish_launcher_round"
+            app:layout_constraintEnd_toEndOf="@+id/cust_background"
+            app:layout_constraintStart_toStartOf="@id/cust_background"
+            app:layout_constraintTop_toTopOf="@id/cust_background" />
+
+        <TextView
+            android:id="@+id/customerdetailsgreeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Here are the details of your account:"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@id/customerdetailslogo"
+            app:layout_constraintStart_toStartOf="@+id/customerdetailslogo"
+            app:layout_constraintTop_toBottomOf="@id/customerdetailslogo" />
+
+
+        <TextView
+            android:id="@+id/testingTextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Username: "
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/customerdetailsgreeting"
+            app:layout_constraintTop_toBottomOf="@id/customerdetailsgreeting" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Postal Code: "
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/testingTextview"
+            app:layout_constraintTop_toBottomOf="@+id/testingTextview" />
+
+        <TextView
+            android:id="@+id/customerdetailspostalcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Postal Code: "
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/testingTextview"
+            app:layout_constraintTop_toBottomOf="@+id/testingTextview" />
+
+        <TextView
+            android:id="@+id/customerdetailsorders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Past Orders: "
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/testingTextview"
+            app:layout_constraintTop_toBottomOf="@id/customerdetailspostalcode" />
+
+        <ScrollView
+            android:layout_width="250dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/image_borders"
+            android:layout_marginBottom="25dp"
+            app:layout_constraintEnd_toEndOf="@+id/customerdetailsgreeting"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="@+id/customerdetailsorders"
+            app:layout_constraintTop_toBottomOf="@id/customerdetailsorders">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/customerdetails_pastorders"
+                android:stretchColumns="*"/>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

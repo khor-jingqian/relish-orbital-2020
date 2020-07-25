@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_customer_account"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Your account" />
+        <item
+            android:id="@+id/menu_customer_browse"
+            android:icon="@drawable/ic_people_black_24dp"
+            android:title="Browse" />
+        <item
+            android:id="@+id/menu_customer_location"
+            android:icon="@drawable/ic_people_black_24dp"
+            android:title="Search Nearby" />
+    </group>
+
+
+</menu>
